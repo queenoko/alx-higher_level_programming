@@ -26,7 +26,7 @@ listint_t *insert_node(listint_t **head, int number)
 			< number)
 		node_list = node_list->next;
 	new->next = node_list->next;
-	node->next = new;
+	node_list->next = new;
 
 	return (new);
 }
