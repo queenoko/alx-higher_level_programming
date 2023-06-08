@@ -10,6 +10,6 @@ if __name__ == "__main__":
     elif oko == 1:
         print("1 argument:")
     else:
-        print("{} arguments:".format(count))
+        print("{} arguments:".format(oko))
     for i in range(oko):
         print("{}: {}".format(i + 1, sys.argv[i + 1]))
