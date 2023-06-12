@@ -32,7 +32,7 @@ listint_t *reverse_listint(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint *temp_1, *reverse_1, *midd_1;
+	listint_t *temp_1, *reverse_1, *midd_1;
 	size_t size_1 = 0, a;
 
 	if (*head == NULL || (*head)->next == NULL)
@@ -59,7 +59,7 @@ int is_palindrome(listint_t **head)
 	temp_1 = *head;
 	while (reverse_1)
 	{
-		if (temp_1->n != reverse->n)
+		if (temp_1->n != reverse_1->n)
 			return (0);
 		temp_1 = temp_1->next;
 		reverse_1 = reverse_1->next;
