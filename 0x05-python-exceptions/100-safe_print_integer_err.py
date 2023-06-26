@@ -6,7 +6,8 @@ import sys
 def safe_print_integer_err(value):
     """prints integer with "{:d}".format(0
 
-    If ValueError message exist, a correspoding message is printed to standard error
+    If ValueError message exist, a correspoding message is printed to
+    standard error
 
     Arg:
     value (int): the integer to print
