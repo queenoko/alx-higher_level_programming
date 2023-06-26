@@ -23,6 +23,9 @@ def list_division(my_list_1, my_list_2, list_length):
         except ZeroDivisionError:
             print("division by 0")
             divi = 0
+        except IndexError:
+            print("out of range")
+            divi = 0
         finally:
             fresh_list.append(divi)
         return (fresh_list)
