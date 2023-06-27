@@ -14,8 +14,12 @@ class Square:
         TypeError: size is not an integer
         ValueError: size is less than 0
         """
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
 
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -37,4 +41,4 @@ class Square:
         Return square size
         """
 
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
