@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# 100-singly_linked_list.py
 """Module for singly linked list"""
 
 
