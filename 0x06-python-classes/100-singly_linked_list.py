@@ -27,8 +27,16 @@ class Node:
         self.__data = value
 
     @property
+    def next_node(self):
+        """gets attribute of next_node
+        Returns next node
+        """
+
+        return (self.__next_node)
+
+    @next_node.setter
     def next_node(self, value):
-        """sets the value for the next node"""
+        """set next node value"""
 
         if (value is not None and not isinstance(value, None)):
             raise TypeError('next_node must be a Node object')
