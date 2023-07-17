@@ -13,27 +13,25 @@ import json
 from io import StringIO
 
 
-'''
-    Runs test cases for the square module
-'''
+"""
+    square module test cases
+"""
 
 
 class test_square(unittest.TestCase):
-    '''
-        Testing square
-    '''
+    """Testing square"""
 
     def setUp(self):
-        '''
+        """
             Initializing instance with width and height
             parameters
-        '''
+        """
         self.s = Square(5)
 
     def tearDown(self):
-        '''
-            Deleting created instance
-        '''
+        """
+            Deletes created instance
+        """
         try:
             os.remove("Square.json")
         except:
@@ -42,29 +40,29 @@ class test_square(unittest.TestCase):
 
     def test_width(self):
         '''
-            Testing the square width getter
+            Test square width getter
         '''
         self.assertEqual(5, self.s.width)
 
     def test_height(self):
         '''
-            Testing the square height getter
+            Test square height getter
         '''
         self.assertEqual(5, self.s.height)
 
     def test_x(self):
-        '''
-            Testing square x getter and setter
-        '''
+        """
+            Test square x getter and setter
+        """
 
         self.s.x = 54
         self.assertEqual(54, self.s.x)
         self.assertEqual(0, self.s.y)
 
     def test_y(self):
-        '''
-            Testing square y getter and setter
-        '''
+        """
+            Test square y getter and setter
+        """
 
         self.s.y = 45
         self.assertEqual(45, self.s.y)
