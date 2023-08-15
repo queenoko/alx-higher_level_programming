@@ -128,7 +128,7 @@ class Rectangle(Base):
                     if n is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = m
+                        self.id = n
                 elif m == "width":
                     self.width = n
                 elif m == "height":
