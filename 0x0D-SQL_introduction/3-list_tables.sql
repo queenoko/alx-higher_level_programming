@@ -1,2 +1,2 @@
---This  Lists all tables in a database schema.
+-- This  Lists all tables in a database schema.
 SHOW TABLES;
