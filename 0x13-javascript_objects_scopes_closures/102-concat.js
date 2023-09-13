@@ -1,20 +1,23 @@
 #!/usr/bin/node
-const sosfil = require('sosfil');
+/**
+ * This Concatenates two files
+ */
+const fs = require('fs');
 
 const fileA = process.argv[2];
 const fileB = process.argv[3];
 const fileC = process.argv[4];
 
 if (
-  sosfil.existsSync(fileA) &&
-sosfil.statSync(fileA).isFile &&
-sosfil.existsSync(fileB) &&
-sosfil.statSync(fileB).isFile &&
+  fs.existsSync(fileA) &&
+fs.statSync(fileA).isFile &&
+fs.existsSync(fileB) &&
+fs.statSync(fileB).isFile &&
 fileC !== undefined
 ) {
-  const fileAContent = sosfil.readFileSync(fileA);
-  const fileBContent = sosfil.readFileSync(fileB);
-  const stream = sosfil.createWriteStream(fileC);
+  const fileAContent = fs.readFileSync(fileA);
+  const fileBContent = fs.readFileSync(fileB);
+  const stream = fs.createWriteStream(fileC);
 
   stream.write(fileAContent);
   stream.write(fileBContent);
