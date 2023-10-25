@@ -1,5 +1,5 @@
 #!/usr/bin/node
-# script to write string to a file..
+
 
 const fs = require('fs');
 const filename = process.argv[2];
